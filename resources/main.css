@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+    font-family: Roboto;
+}
+body {
+    background-image: url('images/robothand.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+}
