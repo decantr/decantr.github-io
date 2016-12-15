@@ -2,8 +2,27 @@
 * {
     font-family: Roboto;
 }
+.w3-content1{max-width:1820px;
+    margin:auto}
 body {
-    background-image: url('images/robothand.jpg');
     background-size: auto;
     background-repeat: no-repeat;
+}
+.blocks {
+    text-align: justify;
+    display: inline-block;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 24%;
+    box-shadow: 2px 2px 2px;
+}
+.blocks li {
+    counter-increment: foo;
+    display: table-row;
+}
+
+.blocks li::before {
+    content: counter(foo) ".";
+    display: table-cell;
+    padding-right: .4em;
 }
