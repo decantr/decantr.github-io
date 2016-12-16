@@ -5,28 +5,34 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* First image (Logo. Full height) */
+/* First image (Start) */
 .bgimg-1 {
     background-image: url('images/robothand.jpg');
     min-height: 100%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (Advantages) */
 .bgimg-2 {
     background-image: url("images/light.jpg");
     min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* Third image (Disadvantages) */
 .bgimg-3 {
     background-image: url("images/wDroidArmy.jpg");
+    min-height: 400px;
+}
+
+/* Fourth image (Conclusion) */
+.bgimg-4{
+    background-image: url("images/roborwork.jpg");
     min-height: 400px;
 }
 
