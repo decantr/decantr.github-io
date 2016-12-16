@@ -8,22 +8,6 @@
     <link rel='stylesheet' href='resources/main.css'>
     <!-- import our jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-        $(function() {
-            $('a[href*="#"]:not([href="#"])').click(function() {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
-        });
-    </script>
     <!-- import our javascript -->
     <script type="text/javascript" src="resources/main.js"></script>
     <!-- import the roboto font (rather fitting)-->
@@ -36,11 +20,6 @@
     <!-- navbar -->
     <div class="w3-top w3-black w3-opacity-min">
         <ul class="w3-navbar" id="myNavbar">
-            <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
-                <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </li>
             <li class="w3-left-align"><a href="#home"><i class="fa fa-home"></i> Start</a></li>
             <li class="w3-hide-small"><a href="#intro"><i class="fa fa-exclamation"></i> Introduction</a></li>
             <li class="w3-hide-small"><a href="#eth"><i class="fa fa-question" aria-hidden="true"></i> Ethical</a></li>
@@ -49,100 +28,132 @@
         </ul>
     </div>
 
-    <!-- First Parallax Image with Logo Text -->
+    <!-- first image with title -->
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
             <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">robotics<span class="w3-hide-small"> IN </span>industry</span>
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-    <!-- Container Intro -->
+    <!-- intro -->
     <div class="w3-content w3-container w3-padding-64" id="intro">
         <h2 class="w3-center w3-xxlarge w3-wide">Introduction<hr /></h2>
         <div class="w3-row">
             <div class="w3-col m6 w3-center w3-padding-large">
-                <img src="resources/images/walle.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me">
+                <img src="resources/images/walle.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off">
             </div>
-            <p>Robots have been around for a good while, they have slowly been becoming part of our lives and being involved into industry since the 1970’s. Originally robotics was mainly used in IT but nowadays you can find it in many areas, such as manufacturing,
-                construction, entertainment, health care and agriculture. However, implementation of robots in the workplace causes several issues.</p>
+            <p>
+                Robots have been around for a good while, they have slowly been becoming part of our lives and being involved into industry since the 1970’s. Originally robotics was mainly used in IT but nowadays you can find it in many areas, such as manufacturing, construction, entertainment, health care and agriculture. However, implementation of robots in the workplace causes several issues.
+            </p>
         </div>
     </div>
 
-    <!-- Image with Advantage -->
+    <!-- second image-->
     <div class="bgimg-2 w3-display-container w3-opacity-min">
     </div>
 
     <!-- advantages -->
     <div class="w3-content1 w3-container w3-padding-64" id="eth">
         <h2 class="w3-center w3-xxlarge w3-wide">Ethical<hr /></h2>
-            <p>
-                There are significant moral and ethical factors inherent in the issue of automation. Some areas with the potential for augmentation in this manner present the question of whether or not using robotics can be morally justified.<br/><br  />
-	<h5>Medicine</h5>
-“Clinical Decision Support Systems” are a kind of AI Expert System used in the field of medicine. Their intended use is to support clinical personnel by providing recommendations for treatment based upon information about the patient's condition given to the system by a doctor. These may cover gaps in the doctor's own medical knowledge, but can a machine understand a patient's subjective “feelings”? What might be considered extreme pain for one patient could be mild discomfort to another, and only an experienced doctor could diagnose the common condition behind two different sensations.
-It must be said that in practice these expert systems have shown to be an overall positive, helping doctors to make correct treatment decisions. Unfeeling of fatigue and incapable of
-But the importance of having a human doctor to make the final decision seems clear. At the moment there seems little potential for these systems to become anything more than knowledge bases to augment the doctor's own medical experience.<br /><br  />
-	<h5>War</h5>
-Artificial Intelligence has often been associated with war. One need only consider movies like The Terminator (1984) to understand how the risks of AI have been understood in the public consciousness almost since its inception. But at the same time replacing human soldiers with robots on the battlefield might seem a noble goal. Could future warfare be conducted by remote control?
-To some degree it already is. Militaries around the world regularly deploy Unmanned Air Vehicles, drones, to commit violence from half a world away. At this time there is presumably always a human at the controls, but for how much longer?
-Even were soldiers to be replaced en masse by expendable robots, and wars decided by the manufacturing prowess of the belligerents, people will always be present at ground zero. Who is responsible if a robot guns down an innocent person?
-A trivia note: the UK Ministry of Defence currently operates a network of satellites providing communications to the British Armed Forces. The engineer who gave it the name Skynet perhaps saw some irony in the choice.<br  /><br  />
-            </p>
-        </div>
+        <p>
+            There are significant moral and ethical factors inherent in the issue of automation. Some areas with the potential for augmentation in this manner present the question of whether or not using robotics can be morally justified.<br/><br />
+            <h5>Medicine</h5>
+            “Clinical Decision Support Systems” are a kind of AI Expert System used in the field of medicine. Their intended use is to support clinical personnel by providing recommendations for treatment based upon information about the patient's condition
+            given to the system by a doctor. These may cover gaps in the doctor's own medical knowledge, but can a machine understand a patient's subjective “feelings”? What might be considered extreme pain for one patient could be mild discomfort to
+            another, and only an experienced doctor could diagnose the common condition behind two different sensations. It must be said that in practice these expert systems have shown to be an overall positive, helping doctors to make correct treatment
+            decisions. Unfeeling of fatigue and incapable of But the importance of having a human doctor to make the final decision seems clear. At the moment there seems little potential for these systems to become anything more than knowledge bases
+            to augment the doctor's own medical experience.<br /><br />
+            <h5>War</h5>
+            Artificial Intelligence has often been associated with war. One need only consider movies like The Terminator (1984) to understand how the risks of AI have been understood in the public consciousness almost since its inception. But at the
+            same time replacing human soldiers with robots on the battlefield might seem a noble goal. Could future warfare be conducted by remote control? To some degree it already is. Militaries around the world regularly deploy Unmanned Air Vehicles,
+            drones, to commit violence from half a world away. At this time there is presumably always a human at the controls, but for how much longer? Even were soldiers to be replaced en masse by expendable robots, and wars decided by the manufacturing
+            prowess of the belligerents, people will always be present at ground zero. Who is responsible if a robot guns down an innocent person? A trivia note: the UK Ministry of Defence currently operates a network of satellites providing communications
+            to the British Armed Forces. The engineer who gave it the name Skynet perhaps saw some irony in the choice.<br /><br />
+        </p>
     </div>
 
-    <!-- Third Parallax Image with Portfolio Text -->
-    <div class="bgimg-3 w3-display-container w3-opacity-min">
-    </div>
+    <!-- third image-->
+    <div class="bgimg-3 w3-display-container w3-opacity-min"></div>
 
+    <!-- social -->
     <div class="w3-content1 w3-container w3-padding-64" id="soc">
         <h2 class="w3-center w3-xxlarge w3-wide">Social<hr /></h2>
-            <p>
-                Human history is replete with the use of artificial devices to complete ordinary tasks. The rate of technological advancement has only grown faster in recent years. Consider how the abacus in various forms was the bleeding-edge of numerical data tech for thousands of years. Then the mechanical calculator rendered it entirely obsolete in an instant. Thereafter an electronic version of the same, and now consider that most people carry portable calculators in their pockets wherever they go, and a whole lot more besides, all contained within one single device that didn't exist even a decade or two ago. It's easy to take this exponential rate of development and imagine its ramifications in the workplace. Where the oft-repeated cry “immigrants took our jobs!” may ring, soon perhaps the similar “robots took our jobs!” might replace it.<br  /><br  />
-                Some jobs are more at risk than others. Artificial Intelligence cannot make the decisions the major CEO needs to make to grow his company. Or can it? Would a statistic-led approach be able to substitute an executive's instincts? The more detailed the field of data analytics gets the better able an AI system will be to make decisions, purely by interpretation and analysis of previous decisions and market conditions.<br  /><br  />
-                And so we see that no job is truly safe. If it can be boiled down to 1s and 0s, Yes or No. And the more brainpower we devote to the pursuit of reducing every analogue situation into digital inputs and outputs the sooner this eventuality occurs. What will it mean for our society when mass unemployment pushes out the majority?<br  /><br  />
-                Automation, though it might seem new and scary to many, is not a novel concept. As we've seen, humans harnessing technology to make tasks easier has occurred throughout our history. But jamming a rock in a stick to make a spear is hardly comparable to the mass replacement of human workers in factories after the introduction of the more efficient assembly line during the Industrial Revolution. What happened then?<br  /><br  />
-                It appears that competition for the remaining jobs resulted in severe rates of unemployment, at least for the early stages of the period. The machines rendered many skilled trades entirely obsolete. Working and living conditions were poor, and life was miserable, tragic and short.
-                The worsening conditions of life gave rise to civil unrest, the Luddite attacks and backlash from rising labour movements. That these events might be repeated were a similar Robotics Revolution occur again doesn't seem so far-fetched.<br  /><br  />
-                But that was then. Don't we nowadays have a more enlightened society, more humanitarian labour laws, protections and safety nets?<br  /><br  />
-                Perhaps, but likely not enough. The welfare system we have now is not designed to deal with a rapid influx of unemployed workers, skilled or not. When it's cheaper for one company to replace the majority of its workforce with machinery, others will follow suit quickly. Unemployment, austerity and poverty bring with them more crime, worse mental health and more strain on medical and law enforcement services. Is our society sitting on a powder keg with a fuse potentially only a decade long?<br  /><br  />
-                If the current systems are incapable, we may have to reinvent them. We have decades of thought and research to draw from. Ideas such as an unconditional Basic Income, in which every adult citizen is paid an annual sum regardless of employment, may be where we look. Restructures of existing systems, looking at work in a different way.<br  /><br  />
-                There are solutions to the problems of a future automated scarcity society, and we may have to trust in our government to make the correct choice in the moment, and in timely fashion too. Whether we achieve a post-scarcity utopia or lose our progress and echo some of the misery of the Industrial Revolution remains to be seen.
-<br  /><br  />
-            </p>
-        </div>
+        <p>
+            Human history is replete with the use of artificial devices to complete ordinary tasks. The rate of technological advancement has only grown faster in recent years. Consider how the abacus in various forms was the bleeding-edge of numerical data tech
+            for thousands of years. Then the mechanical calculator rendered it entirely obsolete in an instant. Thereafter an electronic version of the same, and now consider that most people carry portable calculators in their pockets wherever they go,
+            and a whole lot more besides, all contained within one single device that didn't exist even a decade or two ago. It's easy to take this exponential rate of development and imagine its ramifications in the workplace. Where the oft-repeated
+            cry “immigrants took our jobs!” may ring, soon perhaps the similar “robots took our jobs!” might replace it.
+            <br /><br />
+            Some jobs are more at risk than others. Artificial Intelligence cannot make the decisions the major CEO needs
+            to make to grow his company. Or can it? Would a statistic-led approach be able to substitute an executive's instincts? The more detailed the field of data analytics gets the better able an AI system will be to make decisions, purely by interpretation
+            and analysis of previous decisions and market conditions.
+            <br /><br />
+            And so we see that no job is truly safe. If it can be boiled down to 1s and 0s, Yes or No. And the more brainpower we devote to the pursuit of reducing every analogue situation
+            into digital inputs and outputs the sooner this eventuality occurs. What will it mean for our society when mass unemployment pushes out the majority?
+            <br /><br />
+            Automation, though it might seem new and scary to many, is not a novel concept.
+            As we've seen, humans harnessing technology to make tasks easier has occurred throughout our history. But jamming a rock in a stick to make a spear is hardly comparable to the mass replacement of human workers in factories after the introduction
+            of the more efficient assembly line during the Industrial Revolution. What happened then?<br /><br /> It appears that competition for the remaining jobs resulted in severe rates of unemployment, at least for the early stages of the period.
+            The machines rendered many skilled trades entirely obsolete. Working and living conditions were poor, and life was miserable, tragic and short. The worsening conditions of life gave rise to civil unrest, the Luddite attacks and backlash from
+            rising labour movements. That these events might be repeated were a similar Robotics Revolution occur again doesn't seem so far-fetched.
+            <br /><br />
+            But that was then. Don't we nowadays have a more enlightened society, more humanitarian labour
+            laws, protections and safety nets?
+            <br /><br />
+            Perhaps, but likely not enough. The welfare system we have now is not designed to deal with a rapid influx of unemployed workers, skilled or not. When it's cheaper for one company to replace the
+            majority of its workforce with machinery, others will follow suit quickly. Unemployment, austerity and poverty bring with them more crime, worse mental health and more strain on medical and law enforcement services. Is our society sitting
+            on a powder keg with a fuse potentially only a decade long?
+            <br /><br />
+            If the current systems are incapable, we may have to reinvent them. We have decades of thought and research to draw from. Ideas such as an unconditional Basic Income,
+            in which every adult citizen is paid an annual sum regardless of employment, may be where we look. Restructures of existing systems, looking at work in a different way.
+            <br /><br />
+            There are solutions to the problems of a future automated
+            scarcity society, and we may have to trust in our government to make the correct choice in the moment, and in timely fashion too. Whether we achieve a post-scarcity utopia or lose our progress and echo some of the misery of the Industrial
+            Revolution remains to be seen.
+            <br /><br />
+        </p>
+    </div>
     </div>
 
-    <!-- Third Image-->
-    <div class="bgimg-4 w3-display-container w3-opacity-min">
-        <div class="w3-display-middle">
-        </div>
-    </div>
+    <!-- fourth image-->
+    <div class="bgimg-4 w3-display-container w3-opacity-min"></div>
 
-    <!-- Container Conclusion -->
+    <!-- conclusion -->
     <div class="w3-content w3-container w3-padding-64" id="conc">
         <h2 class="w3-center w3-xxlarge w3-wide">Conclusion<hr /></h2>
         <div class="w3-row">
-        <div class="w3-col m6 w3-padding-large" style="float:right;display:inline-block;">
-            <img src="resources/images/walle.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" >
-        </div>
-            <p >To conclude, robots have had significant impact on our lives and in the workplace but that being said for all their uses they also present serious drawbacks, the major one being the unemployment rate. Even though, humans will always be an essential part in industry as robots cannot think for themselves or be creative… at least not yet.</p>
+            <div class="w3-col m6 w3-padding-large" style="float:right;display:inline-block;">
+                <img src="resources/images/walle.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off">
+            </div>
+            <p>
+                To conclude, robots have had significant impact on our lives and in the workplace but that being said for all their uses they also present serious drawbacks, the major one being the unemployment rate. Even though, humans will always be an essential part in industry as robots cannot think for themselves or be creative… at least not yet.
+            </p>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
         <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
     </footer>
 </body>
+
+<!-- jquery for smooth scrolling -->
+<script>
+    $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
 
 </html>
